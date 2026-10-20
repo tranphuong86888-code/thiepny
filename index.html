@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gửi Em Yêu ❤️</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden;
+            background: linear-gradient(135deg, #ffd6e7, #fff0f5, #ffc2d8);
+            font-family: "Segoe UI", sans-serif;
+            padding: 20px;
+        }
+        
+        .card {
+            width: 100%;
+            max-width: 430px;
+            padding: 35px 25px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.88);
+            border: 2px solid white;
+            border-radius: 25px;
+            box-shadow: 0 10px 40px rgba(255, 65, 130, 0.25);
+            position: relative;
+            z-index: 2;
+            animation: appear 1.2s ease;
+        }
+        
+        @keyframes appear {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .heart {
+            font-size: 65px;
+            animation: heartbeat 1.2s infinite;
+        }
+        
+        @keyframes heartbeat {
+            0%,
+            100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.18);
+            }
+        }
+        
+        h1 {
+            color: #ff3478;
+            font-size: 28px;
+            margin: 15px 0;
+        }
+        
+        .subtitle {
+            color: #a94468;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+        
+        .divider {
+            width: 80px;
+            height: 3px;
+            background: #ff77a8;
+            margin: 20px auto;
+            border-radius: 10px;
+        }
+        
+        .letter {
+            display: none;
+            color: #804157;
+            font-size: 16px;
+            line-height: 1.9;
+            text-align: left;
+            margin-top: 20px;
+            animation: appear 1s ease;
+        }
+        
+        .letter.show {
+            display: block;
+        }
+        
+        .letter p {
+            margin-bottom: 12px;
+        }
+        
+        button {
+            margin-top: 22px;
+            border: none;
+            border-radius: 30px;
+            padding: 14px 25px;
+            background: linear-gradient(45deg, #ff4081, #ff78a8);
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 5px 15px #ffb0ca;
+            transition: 0.3s;
+        }
+        
+        button:hover {
+            transform: scale(1.05);
+        }
+        
+        .signature {
+            text-align: right;
+            color: #ff3478;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        
+        .floating-heart {
+            position: fixed;
+            bottom: -30px;
+            pointer-events: none;
+            animation: floatUp linear forwards;
+            z-index: 1;
+        }
+        
+        @keyframes floatUp {
+            from {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+            }
+            to {
+                transform: translateY(-110vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        
+        .footer {
+            color: #d45b82;
+            font-size: 13px;
+            margin-top: 22px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+        <div class="heart">💗</div>
+
+        <h1>Chúc Mừng 20/10</h1>
+
+        <div class="subtitle">
+            Gửi cô gái đặc biệt nhất trong lòng anh 🌷
+        </div>
+
+        <div class="divider"></div>
+
+        <p class="subtitle">
+            Hôm nay là ngày của em,<br> người khiến thế giới của anh trở nên dịu dàng hơn.
+        </p>
+
+        <button id="openBtn" onclick="openLetter()">
+            💌 Mở thư tình của anh
+        </button>
+
+        <div class="letter" id="letter">
+            <p>Gửi em yêu của anh ❤️,</p>
+
+            <p>
+                Nhân ngày 20/10, anh chúc em luôn xinh đẹp, vui vẻ, bình an và lúc nào cũng nở nụ cười thật rạng rỡ.
+            </p>
+
+            <p>
+                Cảm ơn em vì đã xuất hiện trong cuộc đời anh, vì những lần quan tâm, những tin nhắn nhỏ bé và những khoảnh khắc khiến anh cảm thấy hạnh phúc.
+            </p>
+
+            <p>
+                Anh không biết tương lai sẽ có những điều gì, nhưng anh mong mình sẽ luôn cố gắng, cùng nhau trưởng thành và tạo nên thật nhiều kỷ niệm đẹp.
+            </p>
+
+            <p>
+                Anh mong em luôn được yêu thương, không chỉ hôm nay mà còn trong tất cả những ngày bình thường sau này nữa.
+            </p>
+
+            <p>
+                <strong>
+                    Anh yêu em nhiều lắm! Mong rằng anh sẽ luôn
+                    là một phần hạnh phúc của em. 💕
+                </strong>
+            </p>
+
+            <div class="signature">
+                Mãi thương em,<br> Người yêu của em ❤️
+            </div>
+        </div>
+
+        <div class="footer">
+            Made with ❤️ just for you
+        </div>
+    </div>
+
+    <script>
+        function openLetter() {
+            const letter = document.getElementById("letter");
+            const button = document.getElementById("openBtn");
+
+            letter.classList.add("show");
+            button.textContent = "💖 Anh yêu em!";
+            button.disabled = true;
+
+            // Tạo nhiều trái tim bay lên
+            for (let i = 0; i < 25; i++) {
+                setTimeout(createHeart, i * 100);
+            }
+        }
+
+        function createHeart() {
+            const heart = document.createElement("div");
+            heart.className = "floating-heart";
+
+            const hearts = ["❤️", "💗", "💕", "💖", "💘"];
+            heart.textContent =
+                hearts[Math.floor(Math.random() * hearts.length)];
+
+            heart.style.left = Math.random() * 100 + "vw";
+            heart.style.fontSize = (18 + Math.random() * 22) + "px";
+            heart.style.animationDuration = (3 + Math.random() * 4) + "s";
+
+            document.body.appendChild(heart);
+
+            setTimeout(() => heart.remove(), 7500);
+        }
+
+        // Trái tim bay nhẹ nhàng liên tục
+        setInterval(createHeart, 650);
+    </script>
+
+</body>
+
+</html>
